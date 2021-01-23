@@ -9,6 +9,7 @@ ENV TERRAFORM_VERSION=${TERRAFORM_VERSION:-0.12.29}
 ENV GCLOUD_CLI_VERSION=${GCLOUD_CLI_VERSION:-324.0.0}
 ENV AZURE_CLI_VERSION=${AZURE_CLI_VERSION:-2.18.0}
 ENV AWS_CLI_VERSION=${AWS_CLI_VERSION:-2.1.21}
+ENV ANSIBLE_VERSION=${ANSIBLE_VERSION:-2.9.11}
 
 # Install apt-get tools
 RUN apt update \
@@ -46,5 +47,8 @@ RUN pip3 --no-cache-dir install azure-cli==${AZURE_CLI_VERSION}
 
 # Install aws-cli
 RUN pip3 --no-cache-dir install git+git://github.com/aws/aws-cli.git#${AWS_CLI_VERSION}
+
+# Install Ansible
+RUN pip3 --no-cache-dir install ansible==${ANSIBLE_VERSION}
 
 CMD ["/bin/bash"]
