@@ -8,7 +8,7 @@ push:
 	docker push $(IMAGE_TAG)
 
 run:
-	docker run -t -i --rm $(IMAGE_TAG):latest bash
+	docker run -t -i --env-file=.env --rm $(IMAGE_TAG):latest bash
 
 run-privileged:
-	docker run -t -i --rm --privileged $(IMAGE_TAG):latest bash
+	docker run -t -i --env-file=.env --rm --privileged $(IMAGE_TAG):latest bash

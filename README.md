@@ -5,7 +5,17 @@ A simple container for cloud-related development sandbox with tools for:
 - Network troubleshooting
 - etc.
 
-## Pre-requisites
+## Sandbox pre-requesites (credentials)
+Create a `.env` file containing the variables for authenticating into the cloud providers' cli, as for example:
+```
+# AWS CLI Configuration
+AWS_ACCESS_KEY_ID=
+AWS_SECRET_ACCESS_KEY=
+AWS_DEFAULT_REGION=us-east-1
+AWS_DEFAULT_OUTPUT=json
+```
+
+## Docker build / run pre-requisites
 
 Set your dockerhub username as environment variable:
 ```
