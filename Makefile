@@ -1,5 +1,5 @@
 DOCKERHUB_USERNAME?=fsschmitt
-IMAGE_TAG?=$(DOCKERHUB_USERNAME)/cloud-sandbox
+IMAGE_TAG?=$(DOCKERHUB_USERNAME)/cloud-sdk-container
 
 build:
 	docker build --tag $(IMAGE_TAG) .
