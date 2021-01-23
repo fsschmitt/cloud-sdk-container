@@ -1,4 +1,4 @@
-# cloud-sandbox
+# cloud-sdk-container
 A simple container for cloud-related development sandbox with tools for:
 - Cloud providers CLIs (Azure, AWS, GCP)
 - Infrastructure Provisioner (Terraform)
