@@ -14,10 +14,10 @@ ENV ANSIBLE_VERSION=${ANSIBLE_VERSION:-2.9.11}
 # Install apt-get tools
 RUN apt update \
   && apt install -y \
-    # Development Tools
+  # Development Tools
     build-essential curl file git vim \
     apt-transport-https ca-certificates lsb-release gnupg \
-    python3 python3-setuptools python3-pip \
+    python3 python3-setuptools python3-pip groff\
   # Network Troubleshooting
     dnsutils \
     inetutils-ping \
@@ -28,6 +28,8 @@ RUN apt update \
     wget \
     mtr \
     apache2-utils \
+  # Other tools
+    graphviz \
   && pip3 install --upgrade pip \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/*
