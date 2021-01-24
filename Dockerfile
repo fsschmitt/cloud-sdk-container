@@ -17,7 +17,7 @@ RUN apt update \
   # Development Tools
     build-essential curl file git vim \
     apt-transport-https ca-certificates lsb-release gnupg \
-    python3 python3-setuptools python3-pip groff\
+    python3 python3-setuptools python3-pip groff \
   # Network Troubleshooting
     dnsutils \
     inetutils-ping \
@@ -52,5 +52,6 @@ RUN pip3 --no-cache-dir install git+git://github.com/aws/aws-cli.git#${AWS_CLI_V
 
 # Install Ansible
 RUN pip3 --no-cache-dir install ansible==${ANSIBLE_VERSION}
+RUN pip3 --no-cache-dir install boto3
 
 CMD ["/bin/bash"]
